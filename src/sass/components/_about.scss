@@ -1,5 +1,5 @@
 .about {
-  background-image: url('./../img/pattern2.svg');
+  background-image: url('./../img/pattern3.svg');
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -10,7 +10,7 @@
     display: flex;
   }
   &__text {
-      padding-right: 2rem;
+    padding-right: 2rem;
   }
   &__video {
     width: 560px;
