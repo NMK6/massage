@@ -1,0 +1,50 @@
+{
+  "name": "massagebytatyana",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack --config webpack.config.js",
+    "build": "webback --mod production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NMK6/massage.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NMK6/massagebytatyana/issues"
+  },
+  "homepage": "https://github.com/NMK6/massagebytatyana#readme",
+  "devDependencies": {
+    "@babel/core": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@svgr/webpack": "^5.5.0",
+    "autoprefixer": "^10.3.7",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "css-loader": "^6.4.0",
+    "cssnano": "^5.0.8",
+    "file-loader": "^6.2.0",
+    "html-webpack-injector": "^1.1.4",
+    "html-webpack-plugin": "^5.4.0",
+    "imagemin": "^7.0.1",
+    "imagemin-mozjpeg": "^9.0.0",
+    "imagemin-pngquant": "^9.0.2",
+    "imagemin-svgo": "^9.0.0",
+    "imagemin-webpack-plugin": "^2.4.2",
+    "mini-css-extract-plugin": "^2.4.2",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "postcss": "^8.3.9",
+    "postcss-loader": "^6.2.0",
+    "postcss-preset-env": "^6.7.0",
+    "sass": "^1.43.2",
+    "sass-loader": "^12.2.0",
+    "svgo": "^2.6.1",
+    "webpack": "^5.58.2",
+    "webpack-cli": "^4.9.0"
+  },
+  "description": ""
+}

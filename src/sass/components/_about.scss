@@ -1,0 +1,19 @@
+.about {
+  background-image: url('./../img/pattern2.svg');
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 4rem 7rem;
+  background-color: #e8e6e7;
+  height: 100vh;
+  &__container {
+    display: flex;
+  }
+  &__text {
+      padding-right: 2rem;
+  }
+  &__video {
+    width: 560px;
+    height: auto;
+  }
+}

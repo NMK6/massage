@@ -1,0 +1,25 @@
+.contact {
+  background-color: #362a21;
+  height: 100vh;
+  padding: 4rem 7rem;
+  background-image: url('./../img/pattern2.svg');
+  &__container {
+    display: flex;
+    height: 85%;
+  }
+  &__img__container {
+    background-image: url('./../img/tatyana.jpg');
+    width: 30%;
+
+    background-size: cover;
+  }
+  &__text {
+    padding-left: 2rem;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.text__container {
+  display: flex;
+}

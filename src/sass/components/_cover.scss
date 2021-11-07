@@ -1,0 +1,41 @@
+.background__container {
+  // display: flex;
+  // flex-direction: column;
+  //  background-image: url('./../img/tatyana.jpg');
+  // background-position-y: 30%;
+  // background-size: cover;
+  // width: 100vw;
+  // background-blend-mode: multiply;
+  background-color: #131213;
+  padding: 4rem 7rem;
+}
+.background__video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+}
+.title {
+  display: flex;
+  width: 100vw;
+  height: 79vh;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  &__h {
+    z-index: 2;
+  }
+  &__button {
+    margin-top: 2.3rem;
+    width: 11rem;
+    height: 3.4rem;
+    font-size: 1.2rem;
+    border: none;
+    text-transform: uppercase;
+    color: white;
+    border-radius: 25px;
+    background-color: red;
+    z-index: 2;
+  }
+}
