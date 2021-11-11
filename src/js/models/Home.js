@@ -6,4 +6,5 @@ export const home = {
   // buttonMobileLink:
   //   'https://api.whatsapp.com/send?phone=+447427669193&text=Hi FSDS,',
   // buttonLink: 'mailto:fsdsprint@gmail.com',
+  year: new Date().getFullYear(),
 };

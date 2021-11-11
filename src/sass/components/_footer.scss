@@ -1,5 +1,12 @@
 .footer {
   background-color: #392d24;
-  padding: 4rem 7rem 5rem;
-
+  padding: 1rem 7rem 2rem;
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 1rem ;
+  }
+  &__p {
+    opacity: 0.4;
+  }
 }
