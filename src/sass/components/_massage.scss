@@ -32,3 +32,22 @@
     padding-bottom: 1rem;
   }
 }
+@media screen and (max-width: 600px) {
+  .massage {
+    &__one {
+      padding: 2rem 4rem;
+    }
+    &__two {
+      height: auto;
+    }
+  }
+  .one {
+    &__image-container {
+      width: 10rem;
+      height: 12rem;
+      &__ul {
+        list-style-position: inside;
+      }
+    }
+  }
+}

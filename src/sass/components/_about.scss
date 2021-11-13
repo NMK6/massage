@@ -17,3 +17,20 @@
     height: auto;
   }
 }
+@media screen and (max-width: 600px) {
+  .about {
+    padding: 2rem 4rem;
+    height: auto;
+    &__container {
+      flex-direction: column;
+      height: auto;
+    }
+    &__video {
+      width: 80%;
+    }
+  }
+  .about__container {
+    flex-direction: column;
+    height: auto;
+  }
+}

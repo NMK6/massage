@@ -3,7 +3,7 @@
   justify-content: space-between;
   &__logo {
     position: absolute;
-    top: 2.8rem;
+    top: 3.5rem;
     right: 6rem;
     width: 100px;
     z-index: 3;
@@ -31,6 +31,17 @@
     z-index: 4;
     &:hover {
       opacity: 1;
+    }
+  }
+}
+@media screen and (max-width: 600px) {
+  .nav {
+    align-items: top;
+    &__logo {
+      width: 80px;
+    }
+    &__ul {
+      flex-direction: column;
     }
   }
 }

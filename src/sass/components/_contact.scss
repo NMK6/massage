@@ -11,6 +11,7 @@
   &__img-container {
     background-image: url('./../img/tatyana.jpg');
     width: 30%;
+    height: 100%;
     box-shadow: black 0px 20px 30px -10px;
     background-size: cover;
     position: relative;
@@ -50,4 +51,28 @@
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
+}
+@media screen and (max-width: 600px) {
+  .contact {
+    height: auto;
+    &__container {
+      flex-direction: column;
+    }
+
+    &__text {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+  .text__container {
+    flex-direction: column;
+    width: 100%;
+  }
+  .text__p {
+    width: 100%;
+  }
+  // .contact__img__container {
+  //   width: 100%;
+  //   height: 90vh;
+  // }
 }
