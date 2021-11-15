@@ -1,9 +1,26 @@
 .effect {
-  background-color: #40302a;
-  height: 100vh;
-  padding: 4rem 7rem;
-  background-image: url('./../img/back.svg');
-  background-size: contain;
-  background-position: bottom;
-  background-repeat: no-repeat;
+	background-color: #40302a;
+	height: 100vh;
+	padding: 4rem 7rem;
+	background-image: url('./../img/back.svg');
+	background-size: contain;
+	background-position: top;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	&__container {
+		display: flex;
+		gap: 2rem;
+	}
+	&__subheading {
+		padding-bottom: 1rem;
+		padding-top: 0.3rem;
+	}
+	&__effect {
+		width: 33%;
+	}
+	& .fas {
+		font-size: 2rem;
+	}
 }

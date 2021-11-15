@@ -42,10 +42,11 @@ h5 {
   }
 }
 .nav {
-  &__li {
-    font-size: 1.3rem;
+  &__a {
+    font-size: 1.2rem;
     color: #fdf8f4;
     text-transform: uppercase;
+    text-decoration: none;
   }
 }
 .massage__one {
