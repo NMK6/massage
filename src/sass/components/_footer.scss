@@ -1,20 +1,20 @@
 .footer {
-  background-color: #5f4b3c;
-  background-color: #857061;
-  background-color: #54463b;
-  padding: 1.2rem 7rem 2rem;
-  &__container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-  }
-  &__p {
-    opacity: 0.4;
-  }
+	background-color: #5f4b3c;
+	background-color: #857061;
+	background-color: #54463b;
+	padding: 1.5rem 7rem 2rem;
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		gap: 1rem;
+	}
+	&__p {
+		opacity: 0.4;
+	}
 }
 @media screen and (max-width: 600px) {
-  .footer {
-    padding: 1.2rem 4rem 2rem;
-  }
+	.footer {
+		padding: 1.2rem 4rem 2rem;
+	}
 }
