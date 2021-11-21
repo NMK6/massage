@@ -11,8 +11,11 @@
 		/>
 		<meta property="og:type" content="website" />
 		<meta property="og:url" content="https://massagebytatyana.com/" />
-		<meta property="og:description" content="" />
-		<meta name="theme-color" content="#6cb7b7" />
+		<meta
+			property="og:description"
+			content="Mobile massage by professional masseur Tatyana in Dublin."
+		/>
+		<meta name="theme-color" content="#362a21" />
 		<link
 			class="preload-styles"
 			rel="preload"
@@ -20,26 +23,14 @@
 			as="style"
 		/>
 		<link rel="icon" href="/favicon.svg" sizes="any" type="image/svg+xml" />
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Raleway&display=swap"
-			rel="stylesheet"
-		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-			integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>
 	</head>
 	<body>
 		<main class="root">
 			<div class="background">
 				<div class="background__container">
 					<header class="nav">
-						<img src="/img/logo.svg" alt="" class="nav__logo" width="100" />
+						<div class="nav__logo-container"></div>
+
 						<nav class="nav__nav">
 							<ul class="nav__ul">
 								<li class="nav__li"><a href="/" class="nav__a">Home</a></li>
@@ -86,7 +77,7 @@
 				<div class="massage__one">
 					<div id="massage" class="one__container">
 						<h2 class="one__title">Tatyana's massage</h2>
-						<ul class="one__ul">
+						<ul class="one__ul--js">
 							<li class="one__li">
 								An absolutely indispensable technique in modern wellness body
 								care
@@ -97,11 +88,11 @@
 					</div>
 
 					<div class="one__container">
-						<div class="one__image-container"></div>
+						<div class="one__image-container--js"></div>
 					</div>
 				</div>
 			</section>
-			<section id="about" class="about">
+			<section id="about" class="about--js">
 				<h3 class="about__title">About massage</h3>
 				<p class="about__p">Health improving, replenishing, relaxing, deep</p>
 				<div class="about__container">
@@ -128,7 +119,7 @@
 						</p>
 					</div>
 					<div class="about__video-container">
-						<video
+						<!-- <video
 							width="560"
 							height="400"
 							controls
@@ -136,13 +127,13 @@
 							class="about__video"
 						>
 							<source src="/video/massage.mp4" type="video/mp4" />
-						</video>
+						</video> -->
 						<button class="title__button">Book now</button>
 					</div>
 				</div>
 				<div class="about__container"></div>
 			</section>
-			<section id="effect" class="effect">
+			<section id="effect" class="effect--js">
 				<h3 class="effect__title">Effect of Tatyana's massage</h3>
 				<div class="effect__container">
 					<div class="effect__effect">
@@ -183,7 +174,7 @@
 			</section>
 			<section id="benefits" class="benefits">
 				<div class="benefits__container">
-					<div class="benefits__photos-container"></div>
+					<div class="benefits__photos-container--js"></div>
 					<div class="benefits__text-container">
 						<h3 class="benefits__title">Benefits of Tatyana's massage</h3>
 						<p class="benefits__p">
@@ -195,9 +186,8 @@
 						</p>
 					</div>
 				</div>
-				<!-- <div class="benefits__container"></div> -->
 			</section>
-			<section class="education">
+			<section class="education--js">
 				<div class="education__container">
 					<div class="education__text-container">
 						<h2 class="education__title">Education</h2>
@@ -205,20 +195,10 @@
 							Diploma in Complementary Therapies Level 3 ITEC
 						</p>
 					</div>
-					<div class="education__video-container">
-						<video
-							width="560"
-							height="400"
-							controls
-							poster="/img/video.jpg"
-							class="education__video"
-						>
-							<source src="/video/education.mp4" type="video/mp4" />
-						</video>
-					</div>
+					<div class="education__video-container"></div>
 				</div>
 			</section>
-			<section id="prices" class="price">
+			<section id="prices" class="price--js">
 				<div class="price__container">
 					<h2 class="price__title">Treatments & Prices</h2>
 
@@ -228,7 +208,7 @@
 								VIP Full body massage by Tatyana
 							</h5>
 							<div
-								class="price__card-background price__card-background--one"
+								class="price__card-background price__card-background--one-js"
 							></div>
 
 							<div class="price__text-container">
@@ -245,7 +225,7 @@
 						</div>
 						<div class="price__card">
 							<div
-								class="price__card-background price__card-background--two"
+								class="price__card-background price__card-background--two-js"
 							></div>
 							<h5 class="price__subheading">
 								Health Improving, replenishing, relaxing, deep massage by
@@ -263,7 +243,7 @@
 						</div>
 						<div class="price__card">
 							<div
-								class="price__card-background price__card-background--three"
+								class="price__card-background price__card-background--three-js"
 							></div>
 							<h5 class="price__subheading">
 								Health improving, replenishing, relaxing, deep massage by
@@ -307,10 +287,10 @@
 					</div>
 				</div>
 			</section>
-			<section id="contact" class="contact">
+			<section id="contact" class="contact--js">
 				<h2 class="contact__title">Contact</h2>
 				<div class="contact__container">
-					<div class="contact__img-container"></div>
+					<div class="contact__img-container--js"></div>
 					<div class="contact__text">
 						<div class="text__container">
 							<div class="text__p-container">
@@ -347,12 +327,7 @@
 					<span class="footer__year"></span>
 					Mobile Massage by Tatyana. All rights reserved.
 				</p>
-				<img
-					src="/img/logo.svg"
-					alt="logo of Massage by Tatyana"
-					class="nav__logo nav__logo--footer"
-					width="100"
-				/>
+				<div class="nav__logo-container--footer"></div>
 			</div>
 		</footer>
 	</body>
