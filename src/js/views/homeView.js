@@ -7,12 +7,12 @@ export function addMarkup(arr) {
 	yearContainer.textContent = arr.year;
 
 	setTimeout(function () {
-		const logo = `<img
+		const logo = `<a href='/'><img
     src="/img/logo.svg"
     alt="logo"
     class="nav__logo"
     width="100"
-  />`;
+  /></a>`;
 		utils.addExtraHtml(document.querySelector('.nav__logo-container'), logo);
 
 		const videoElement = `<video
@@ -39,13 +39,7 @@ export function addMarkup(arr) {
 			href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Raleway&display=swap"
 			rel="stylesheet"
 		/>
-		<link
-			rel="stylesheet"
-			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
-			integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
-			crossorigin="anonymous"
-			referrerpolicy="no-referrer"
-		/>`;
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />`;
 		utils.addExtraHtml(document.querySelector('head'), fonts);
 	}, 100);
 	setTimeout(function () {
@@ -106,15 +100,29 @@ export function addMarkup(arr) {
 			educationVideo
 		);
 		const footerLogo = `
-			<img
+		<a href="/"><img
 				src='/img/logo.svg'
 				alt='logo of Massage by Tatyana'
 				class='nav__logo nav__logo--footer'
 				width='100'
-			/>`;
+			/></a>`;
 		utils.addExtraHtml(
 			document.querySelector('.nav__logo-container--footer'),
 			footerLogo
 		);
 	}, 200);
+	const secondMenuRoot = document.querySelector('.nav__a--massage');
+	const secondMenu = document.querySelector('.nav__about-ul');
+	secondMenuRoot.addEventListener('click', openSecondMenu);
+	function openSecondMenu() {
+		const lis = document.querySelectorAll('.nav__a-sub');
+		lis.forEach((l, key) => {
+			setTimeout(function () {
+				l.classList.toggle('nav__opacity');
+			}, (key + 1) * 70);
+		});
+		setTimeout(function () {
+			secondMenu.classList.toggle('visually-hidden');
+		}, 10);
+	}
 }

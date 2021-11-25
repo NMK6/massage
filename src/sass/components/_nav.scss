@@ -10,9 +10,9 @@
 		z-index: 3;
 		opacity: 0.7;
 		transition: 2s all ease;
-		&:hover {
-			opacity: 1;
-		}
+		// &:hover {
+		// 	opacity: 1;
+		// }
 	}
 
 	&__logo-container--footer {
@@ -26,17 +26,55 @@
 	}
 
 	&__li {
-		opacity: 0.7;
 		transition: opacity 1s ease-in-out;
 		z-index: 4;
-		&:hover {
-			opacity: 1;
-		}
 	}
 	&__a {
 		padding: 1.6rem 1rem;
+		&--massage {
+			padding: 0 1rem 1.6rem;
+			position: relative;
+			// &:hover {
+			// 	opacity: 0.6;
+			// }
+		}
+		// &:hover {
+		// 	opacity: 0.6;
+		// }
+	}
+	&__about-ul {
+		position: absolute;
+		top: 0;
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		left: -1rem;
+		list-style: none;
+		transition: 3s all ease;
+
+		padding: 3rem 2rem;
+		width: 21rem;
+	}
+
+	&__about-li {
+		background-color: rgb(64, 48, 42);
+		padding: 0.7rem;
+	}
+	&__a-sub {
+		padding: 1.6rem 1rem;
+		opacity: 0;
+		&:hover {
+			opacity: 0.6;
+		}
+	}
+	&__opacity {
+		animation-name: opacity-one;
+		animation-duration: 2s;
+		animation-timing-function: ease;
+		animation-fill-mode: forwards;
 	}
 }
+
 @media screen and (max-width: 600px) {
 	.nav {
 		align-items: top;

@@ -42,11 +42,17 @@ h5 {
 	}
 }
 .nav {
-	&__a {
+	&__a,
+	&__a-sub,
+	&__a--massage {
 		font-size: 1.2rem;
-		color: #fdf8f4;
-		text-transform: uppercase;
+		color: #cbc7c4;
+		// color: #fdf8f4;
 		text-decoration: none;
+		text-transform: uppercase;
+		&:hover {
+			color: #fdf8f4;
+		}
 	}
 }
 .massage__one {

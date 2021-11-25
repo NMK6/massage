@@ -17,6 +17,12 @@
 		height: auto;
 	}
 }
+@media screen and (max-width: 1300px) {
+	.about {
+		height: auto;
+		flex-direction: column;
+	}
+}
 @media screen and (max-width: 600px) {
 	.about {
 		padding: 2rem 4rem;
