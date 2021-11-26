@@ -23,8 +23,25 @@
 		align-items: center;
 	}
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1100px) {
+	.benefits__text-container {
+		padding: 4rem 5rem 4rem 4rem;
+	}
+	.benefits__photos-container {
+		padding: 4rem 4rem 4rem 5rem;
+	}
+}
+@media screen and (max-width: 910px) {
 	.benefits {
 		height: auto;
+		background-color: #40302a;
+		&__text-container {
+			width: 100%;
+			position: absolute;
+			height: 100%;
+		}
+		&__photos-container {
+			opacity: 0.4;
+		}
 	}
 }

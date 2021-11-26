@@ -95,3 +95,33 @@
 		box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 	}
 }
+@media screen and (max-width: 1280px) {
+	.price {
+		height: auto;
+		&__cards-container {
+			flex-direction: column;
+		}
+		&__title {
+			padding-bottom: 0.5rem;
+		}
+		&__card {
+			width: 100%;
+		}
+		&__card-background--two {
+			background-position: center;
+		}
+	}
+}
+@media screen and (max-width: 1100px) {
+	.price {
+		padding: 4rem 5rem;
+	}
+}
+@media screen and (max-width: 1100px) {
+	.price__info-container {
+		flex-direction: column;
+	}
+	.price__info {
+		width: 100%;
+	}
+}

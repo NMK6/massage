@@ -1,53 +1,68 @@
 .massage {
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  &__one {
-    display: flex;
-    padding: 5rem 7rem;
-    background-color: #a69286;
+	display: flex;
+	flex-direction: column;
+	width: 100vw;
+	&__one {
+		display: flex;
+		padding: 5rem 7rem;
+		background-color: #a69286;
 
-    width: 100%;
-  }
-  &__two {
-    height: 100vh;
-    background-color: white;
-  }
+		width: 100%;
+	}
+	&__two {
+		height: 100vh;
+		background-color: white;
+	}
 }
 .one {
-  &__image-container {
-    background-size: contain;
-    background-repeat: no-repeat;
-    position: absolute;
-    right: 2rem;
-    width: 25rem;
-    height: 30rem;
-    background-image: url('./../img/stones-background.png');
-  }
-  &__ul {
-    list-style-image: url('./../img/tick-symbol.svg');
-  }
-  &__li,
-  &__title {
-    padding-bottom: 1rem;
-  }
+	&__image-container {
+		background-size: contain;
+		background-repeat: no-repeat;
+		position: absolute;
+		right: 2rem;
+		width: 25rem;
+		height: 30rem;
+		background-image: url('./../img/stones-background.png');
+	}
+	&__ul {
+		list-style-image: url('./../img/tick-symbol.svg');
+	}
+	&__li,
+	&__title {
+		padding-bottom: 1rem;
+	}
 }
+@media screen and (max-width: 1800px) {
+	.one {
+		&__image-container {
+			height: 20rem;
+			width: 20rem;
+			bottom: -9rem;
+		}
+	}
+}
+@media screen and (max-width: 1100px) {
+	.massage__one {
+		padding: 4rem 5rem;
+	}
+}
+
 @media screen and (max-width: 600px) {
-  .massage {
-    &__one {
-      padding: 2rem 4rem;
-    }
-    &__two {
-      height: auto;
-    }
-  }
-  .one {
-    &__image-container {
-      width: 10rem;
-      height: 12rem;
-      &__ul {
-        list-style-position: inside;
-      }
-    }
-  }
+	.massage {
+		&__one {
+			padding: 2rem 4rem;
+		}
+		&__two {
+			height: auto;
+		}
+	}
+	.one {
+		&__image-container {
+			width: 10rem;
+			height: 12rem;
+			&__ul {
+				list-style-position: inside;
+			}
+		}
+	}
 }

@@ -86,6 +86,11 @@ h5 {
 // .contact__text {
 //   color: #131213;
 // }
+@media screen and (max-width: 910px) {
+	.benefits {
+		color: #fdf8f4;
+	}
+}
 @media screen and (max-width: 600px) {
 	h2,
 	h3,
