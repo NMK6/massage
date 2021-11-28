@@ -17,6 +17,20 @@
 		opacity: 0;
 		transition: 4s all ease;
 	}
+	&__second-menu {
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+		transition: 1s all ease;
+	
+	}
+	&__second-menu--color {
+		background-color: rgba(19, 18, 19, 0.95);
+		z-index: 4;
+	}
 }
 .background__video {
 	position: absolute;
@@ -70,6 +84,9 @@
 @media screen and (max-width: 700px) {
 	.title__h {
 		font-size: 2rem;
+	}
+	.title__button {
+		width: 9rem;
 	}
 }
 @media screen and (max-width: 600px) {

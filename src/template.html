@@ -27,12 +27,13 @@
 	<body>
 		<main class="root">
 			<div class="background">
+				<div class="background__second-menu"></div>
 				<div class="background__container">
 					<header class="nav">
 						<div class="nav__logo-container"></div>
 
 						<nav class="nav__nav">
-							<ul class="nav__ul">
+							<ul id="navigation" class="nav__ul">
 								<li class="nav__li"><a href="/" class="nav__a">Home</a></li>
 								<li class="nav__li nav__a--massage">
 									Massage
@@ -72,7 +73,14 @@
 							<p class="title__p">
 								In the comfort of your own home, all around Dublin
 							</p>
-							<button class="title__button">Book now</button>
+							<button class="title__button">
+								<a
+									href="https://api.whatsapp.com/send?phone=+353899665303&amp;text="
+									class="title__button-a"
+								>
+									Book now
+								</a>
+							</button>
 						</div>
 					</div>
 				</div>
@@ -80,8 +88,8 @@
 
 			<section class="massage">
 				<div class="massage__one">
+					<h2 class="one__title">Tatyana's massage</h2>
 					<div id="massage" class="one__container">
-						<h2 class="one__title">Tatyana's massage</h2>
 						<ul class="one__ul--js">
 							<li class="one__li">
 								An absolutely indispensable technique in modern wellness body
@@ -124,7 +132,14 @@
 						</p>
 					</div>
 					<div class="about__video-container">
-						<button class="title__button about__button">Book now</button>
+						<button class="title__button about__button">
+							<a
+								href="https://api.whatsapp.com/send?phone=+353899665303&amp;text="
+								class="title__button-a"
+							>
+								Book now
+							</a>
+						</button>
 					</div>
 				</div>
 				<div class="about__container"></div>

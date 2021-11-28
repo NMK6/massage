@@ -5,7 +5,43 @@ export function addMarkup(arr) {
 	const backgroundVideo = document.querySelector('.background');
 	backgroundVideo.style.height = elements.rootWidth / 1.82 + 'px';
 	yearContainer.textContent = arr.year;
+	function mobMenu() {
+		if (elements.rootWidth < 700) {
+			const ul = document.querySelector('.nav__ul');
+			ul.classList.add('visually-hidden');
+			const mobButton = `<a class='nav__a-navigation'  href='#navigation'></a>`;
+			const navContainer = document.querySelector('.nav__nav');
+			navContainer.insertAdjacentHTML('afterbegin', mobButton);
+			const navContainerA = document.querySelector('.nav__a-navigation');
+			navContainer.addEventListener('click', function (e) {
+				e.preventDefault();
+				hideCover();
+				setTimeout(function () {
+					ul.classList.toggle('visually-hidden');
+					navContainerA.classList.toggle('nav__a-navigation--close');
+				}, 100);
+			});
+		} else {
+			const secondMenuRoot = document.querySelector('.nav__a--massage');
+			const secondMenu = document.querySelector('.nav__about-ul');
+			secondMenuRoot.addEventListener('click', openSecondMenu);
+			function openSecondMenu() {
+				const lis = document.querySelectorAll('.nav__a-sub');
+				hideCover();
+				lis.forEach((l, key) => {
+					setTimeout(function () {
+						l.classList.toggle('nav__opacity');
+					}, (key + 1) * 70);
+				});
 
+				setTimeout(function () {
+					secondMenu.classList.toggle('visually-hidden');
+				}, 10);
+			}
+		}
+	}
+	mobMenu();
+	window.addEventListener('resize', mobMenu);
 	setTimeout(function () {
 		const logo = `<a href='/'><img
     src="/img/logo.svg"
@@ -111,18 +147,9 @@ export function addMarkup(arr) {
 			footerLogo
 		);
 	}, 200);
-	const secondMenuRoot = document.querySelector('.nav__a--massage');
-	const secondMenu = document.querySelector('.nav__about-ul');
-	secondMenuRoot.addEventListener('click', openSecondMenu);
-	function openSecondMenu() {
-		const lis = document.querySelectorAll('.nav__a-sub');
-		lis.forEach((l, key) => {
-			setTimeout(function () {
-				l.classList.toggle('nav__opacity');
-			}, (key + 1) * 70);
-		});
-		setTimeout(function () {
-			secondMenu.classList.toggle('visually-hidden');
-		}, 10);
+	function hideCover() {
+		const background = document.querySelector('.background__second-menu');
+		background.classList.toggle('background__second-menu--color');
+		document.querySelector('body').classList.toggle('hide-scroll');
 	}
 }
