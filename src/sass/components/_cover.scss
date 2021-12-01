@@ -16,6 +16,7 @@
 	&__video-container {
 		opacity: 0;
 		transition: 4s all ease;
+		width: 100vw;
 	}
 	&__second-menu {
 		position: absolute;
@@ -25,7 +26,6 @@
 		height: 100%;
 		z-index: -1;
 		transition: 1s all ease;
-	
 	}
 	&__second-menu--color {
 		background-color: rgba(19, 18, 19, 0.95);
@@ -83,17 +83,26 @@
 }
 @media screen and (max-width: 700px) {
 	.title__h {
-		font-size: 2rem;
+		font-size: 1.5rem;
+	}
+	.title__p {
+		font-size: 1rem;
 	}
 	.title__button {
-		width: 9rem;
+		width: 7rem;
 	}
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 660px) {
 	.title__h {
 		font-size: 1.5rem;
 	}
 	.background {
-		padding: 2rem 4rem;
+		padding: 3rem 4rem;
+		&__title-container {
+			align-items: flex-end;
+		}
+	}
+	.title__button {
+		margin-top: 1rem;
 	}
 }

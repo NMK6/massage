@@ -119,19 +119,29 @@ h5 {
 		font-size: 1.2rem;
 		padding-bottom: 0.4rem;
 	}
+	.title__button-a {
+		font-size: 0.9rem;
+	}
 }
 @media screen and (max-width: 600px) {
-	// .title {
-	// 	&__h {
-	// 		font-size: 2.2rem;
-	// 	}
-	// 	&__p {
-	// 		font-size: 1.2rem;
-	// 	}
-	// }
 	.nav {
 		&__li {
 			font-size: 1rem;
 		}
+	}
+	.title__button {
+		font-size: 0.7rem;
+	}
+}
+@media screen and (max-width: 450px) {
+	h2,
+	h3,
+	h4 {
+		font-size: 1.4rem;
+		padding-bottom: 1.5rem;
+	}
+	h4,
+	h5 {
+		font-size: 1rem;
 	}
 }

@@ -91,3 +91,21 @@
 		margin-right: 0rem;
 	}
 }
+@media screen and (max-width: 660px) {
+	.contact {
+		&__container {
+			position: relative;
+		}
+
+		&__img-container {
+			height: 100%;
+			position: absolute;
+			width: 100%;
+			top: 0;
+			left: 0;
+		}
+	}
+	.text__container--opacity {
+		opacity: 0.9;
+	}
+}

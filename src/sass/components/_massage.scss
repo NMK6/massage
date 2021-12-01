@@ -71,9 +71,17 @@
 		&__image-container {
 			width: 10rem;
 			height: 12rem;
-			&__ul {
-				list-style-position: inside;
-			}
+			top: 9rem;
 		}
+		&__ul {
+			list-style-position: inside;
+		}
+	}
+}
+@media screen and (max-width: 430px) {
+	.one__image-container {
+		height: 9rem;
+		top: 14rem;
+		right: 3.5rem;
 	}
 }

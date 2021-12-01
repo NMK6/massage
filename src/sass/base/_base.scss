@@ -1,17 +1,18 @@
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 body {
-  overflow-x: hidden;
+	overflow-x: hidden;
+	background-color: #40302a;
 }
 video,
 img {
-  width: 100%;
-  height: auto;
+	width: 100%;
+	height: auto;
 }
 .root {
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
