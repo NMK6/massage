@@ -109,3 +109,16 @@
 		opacity: 0.9;
 	}
 }
+@media screen and (max-width: 500px) {
+	.contact {
+		padding: 3rem;
+	}
+}
+@media screen and (max-width: 340px) {
+	.contact {
+		padding: 3rem 0;
+		&__title {
+			padding-left: 3rem;
+		}
+	}
+}

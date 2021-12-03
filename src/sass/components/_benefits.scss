@@ -36,12 +36,28 @@
 		height: auto;
 		background-color: #40302a;
 		&__text-container {
-			width: 100%;
+			width: 80%;
 			position: absolute;
 			height: 100%;
 		}
 		&__photos-container {
 			opacity: 0.4;
 		}
+	}
+}
+@media screen and (max-width: 500px) {
+	.benefits {
+		padding: 3rem;
+	}
+	.benefits__text-container {
+		padding: 4rem 0 4rem 3rem;
+	}
+	.benefits__photos-container {
+		width: 70%;
+	}
+}
+@media screen and (max-width: 450px) {
+	.benefits__text-container {
+		padding: 4rem 1rem 4rem 3rem;
 	}
 }

@@ -3,10 +3,8 @@ import * as utils from './utils';
 export function addMarkup(arr) {
 	const yearContainer = document.querySelector('.footer__year');
 	const backgroundVideo = document.querySelector('.background');
-	const backgroundV = document.querySelector('.background__video-container');
+
 	backgroundVideo.style.height = elements.rootWidth / 1.82 + 'px';
-	backgroundV.style.height = elements.rootWidth / 1.82 + 'px';
-	backgroundV.style.width = elements.rootWidth + 'px';
 	yearContainer.textContent = arr.year;
 	function mobMenu() {
 		if (elements.rootWidth < 700) {
@@ -17,8 +15,10 @@ export function addMarkup(arr) {
 			navContainer.insertAdjacentHTML('afterbegin', mobButton);
 			const navContainerA = document.querySelector('.nav__a-navigation');
 			navContainer.addEventListener('click', function (e) {
-				// e.preventDefault();
 				hideCover();
+				if (e.target.classList.contains('nav__a-navigation')) {
+					e.preventDefault();
+				}
 				setTimeout(function () {
 					ul.classList.toggle('visually-hidden');
 					navContainerA.classList.toggle('nav__a-navigation--close');

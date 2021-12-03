@@ -45,3 +45,19 @@
 		padding: 5rem 5rem 4rem;
 	}
 }
+@media screen and (max-width: 500px) {
+	.effect {
+		padding: 3rem;
+	}
+}
+@media screen and (max-width: 340px) {
+	.effect {
+		padding: 3rem 0;
+	}
+	.effect__title {
+		padding: 0.5rem 3rem 1.3rem;
+	}
+	.effect__effect {
+		padding: 3rem;
+	}
+}

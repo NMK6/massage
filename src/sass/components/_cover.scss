@@ -1,5 +1,5 @@
 .background {
-	background-color: #131213;
+	background-color: #a69286;
 	padding: 4rem 7rem;
 	position: relative;
 	&__container {
@@ -23,7 +23,7 @@
 		top: 0;
 		right: 0;
 		width: 100%;
-		height: 100%;
+		height: 102%;
 		z-index: -1;
 		transition: 1s all ease;
 	}
@@ -71,31 +71,12 @@
 	}
 }
 
-@media screen and (max-width: 880px) {
-	.title__h {
-		font-size: 3rem;
-	}
-}
-@media screen and (max-width: 790px) {
-	.title__h {
-		font-size: 2.5rem;
-	}
-}
 @media screen and (max-width: 700px) {
-	.title__h {
-		font-size: 1.5rem;
-	}
-	.title__p {
-		font-size: 1rem;
-	}
 	.title__button {
-		width: 7rem;
+		width: 8rem;
 	}
 }
 @media screen and (max-width: 660px) {
-	.title__h {
-		font-size: 1.5rem;
-	}
 	.background {
 		padding: 3rem 4rem;
 		&__title-container {
@@ -104,5 +85,24 @@
 	}
 	.title__button {
 		margin-top: 1rem;
+	}
+}
+@media screen and (max-width: 500px) {
+	.background {
+		padding: 3rem;
+	}
+}
+@media screen and (max-width: 460px) {
+	.background__title-container {
+		margin-top: 2rem;
+	}
+}
+@media screen and (max-width: 360px) {
+	.background__title-container {
+		align-items: center;
+		margin-top: 0;
+	}
+	.title__button--mob {
+		display: none;
 	}
 }

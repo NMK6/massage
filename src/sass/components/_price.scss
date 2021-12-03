@@ -125,3 +125,22 @@
 		width: 100%;
 	}
 }
+@media screen and (max-width: 600px) {
+	.price {
+		padding: 3rem;
+	}
+}
+@media screen and (max-width: 340px) {
+	.price {
+		padding: 3rem 0;
+	}
+	.price__title {
+		padding-left: 3rem;
+	}
+	.price__info {
+		padding: 0 3rem;
+	}
+	.price__card {
+		padding: 3rem;
+	}
+}

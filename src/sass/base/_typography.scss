@@ -47,7 +47,6 @@ h5 {
 	&__a--massage {
 		font-size: 1.2rem;
 		color: #cbc7c4;
-		// color: #fdf8f4;
 		text-decoration: none;
 		text-transform: uppercase;
 		&:hover {
@@ -89,20 +88,36 @@ h5 {
 .effect .fas {
 	font-size: 1.3rem;
 }
-// .contact__text {
-//   color: #131213;
-// }
+
 @media screen and (max-width: 910px) {
 	.benefits {
 		color: #fdf8f4;
+	}
+	.title__h {
+		font-size: 3rem;
+	}
+}
+@media screen and (max-width: 790px) {
+	.title__h {
+		font-size: 2.5rem;
 	}
 }
 @media screen and (max-width: 700px) {
 	p {
 		font-size: 1rem;
 	}
+	.title__p {
+		font-size: 1rem;
+	}
 	.footer__p {
 		font-size: 0.8rem;
+	}
+	.nav {
+		&__a,
+		&__a-sub,
+		&__a--massage {
+			font-size: 1rem;
+		}
 	}
 	button.title__button {
 		font-size: 1rem;
@@ -133,7 +148,10 @@ h5 {
 		font-size: 0.7rem;
 	}
 }
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
+	.title__h {
+		font-size: 1.4rem;
+	}
 	h2,
 	h3,
 	h4 {
@@ -143,5 +161,19 @@ h5 {
 	h4,
 	h5 {
 		font-size: 1rem;
+	}
+}
+@media screen and (max-width: 460px) {
+	h2,
+	h3,
+	h4,
+	.title__h {
+		font-size: 1.2rem;
+	}
+}
+
+@media screen and (max-width: 410px) {
+	.title__p {
+		display: none;
 	}
 }

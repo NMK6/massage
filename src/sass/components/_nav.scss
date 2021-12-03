@@ -97,9 +97,6 @@
 			left: 6.5rem;
 		}
 
-		&__nav {
-			margin-left: -1rem;
-		}
 		&__a-navigation {
 			background-color: #cbc7c4;
 			box-shadow: 0 8px 0 #cbc7c4, 0 -8px 0 #cbc7c4;
@@ -146,9 +143,21 @@
 }
 @media screen and (max-width: 660px) {
 	.nav__nav {
-		margin-left: -2rem;
+		left: 4.5rem;
 	}
 	.nav__logo-container {
 		top: 2.5rem;
+	}
+}
+@media screen and (max-width: 500px) {
+	.nav__nav {
+		top: 2.5rem;
+	}
+	.nav__logo-container {
+		top: 1.8rem;
+		right: 1.8rem;
+	}
+	.nav__ul {
+		padding-top: 1rem;
 	}
 }

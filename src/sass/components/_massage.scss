@@ -20,7 +20,7 @@
 		height: 100%;
 		width: 100%;
 		&:last-child {
-			position: absolute;
+			position: relative;
 		}
 	}
 
@@ -28,8 +28,8 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 		position: absolute;
-		top: 4rem;
-		right: 10rem;
+		top: -6rem;
+		right: -4rem;
 		width: 30rem;
 		height: 24rem;
 		background-image: url('./../img/stones-background.png');
@@ -54,7 +54,8 @@
 		padding: 4rem 5rem;
 	}
 	.one__image-container {
-		right: 6rem;
+		right: -4rem;
+		top: -8rem;
 	}
 }
 
@@ -71,17 +72,34 @@
 		&__image-container {
 			width: 10rem;
 			height: 12rem;
-			top: 9rem;
+			top: -3rem;
+			right: 0;
 		}
 		&__ul {
 			list-style-position: inside;
 		}
 	}
 }
-@media screen and (max-width: 430px) {
+
+@media screen and (max-width: 500px) {
+	.massage {
+		&__one {
+			padding: 3rem;
+		}
+	}
 	.one__image-container {
 		height: 9rem;
-		top: 14rem;
-		right: 3.5rem;
+		top: -4rem;
+		right: -1.6rem;
+	}
+}
+@media screen and (max-width: 460px) {
+	.one__image-container {
+		top: -2rem;
+	}
+}
+@media screen and (max-width: 360px) {
+	.one__image-container {
+		right: -2.8rem;
 	}
 }
