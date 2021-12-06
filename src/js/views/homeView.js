@@ -19,10 +19,10 @@ export function addMarkup(arr) {
 				if (e.target.classList.contains('nav__a-navigation')) {
 					e.preventDefault();
 				}
-				setTimeout(function () {
-					ul.classList.toggle('visually-hidden');
-					navContainerA.classList.toggle('nav__a-navigation--close');
-				}, 100);
+				// setTimeout(function () {
+				ul.classList.toggle('visually-hidden');
+				navContainerA.classList.toggle('nav__a-navigation--close');
+				// }, 100);
 			});
 		} else {
 			const secondMenuRoot = document.querySelector('.nav__a--massage');
