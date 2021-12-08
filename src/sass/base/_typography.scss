@@ -1,15 +1,29 @@
 body {
 	font-size: 16px;
 	color: #131213;
-	font-family: 'Raleway', sans-serif;
+	font-family: system-ui;
 	line-height: 1.4;
+}
+.new-heading {
+	font-family: 'Eagle Lake', cursive;
+	animation-name: add-text;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
+}
+.new-p {
+	font-family: 'Raleway', sans-serif;
+	animation-name: add-text;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease;
 }
 h1,
 h2,
 h3,
 h4 {
 	font-size: 3rem;
-	font-family: 'Eagle Lake', cursive;
+
 	font-weight: 100;
 }
 h2,

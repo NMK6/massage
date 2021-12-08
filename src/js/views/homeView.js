@@ -19,10 +19,9 @@ export function addMarkup(arr) {
 				if (e.target.classList.contains('nav__a-navigation')) {
 					e.preventDefault();
 				}
-				// setTimeout(function () {
+
 				ul.classList.toggle('visually-hidden');
 				navContainerA.classList.toggle('nav__a-navigation--close');
-				// }, 100);
 			});
 		} else {
 			const secondMenuRoot = document.querySelector('.nav__a--massage');
@@ -48,7 +47,7 @@ export function addMarkup(arr) {
 	setTimeout(function () {
 		const logo = `<a href='/'><img
     src="/img/logo.svg"
-    alt="logo"
+    alt="logo" loading='lazy'
     class="nav__logo"
     width="80" height='27'
   /></a>`;
@@ -80,6 +79,20 @@ export function addMarkup(arr) {
 		/>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />`;
 		utils.addExtraHtml(document.querySelector('head'), fonts);
+
+		const h = document.querySelectorAll('.headings');
+
+		h.forEach((one, key) => {
+			setTimeout(function () {
+				one.classList.add('new-heading');
+			}, key  * 60);
+		});
+		const p = document.querySelectorAll('.text');
+		p.forEach((t, key) => {
+			setTimeout(function () {
+				t.classList.add('new-p');
+			}, key * key * 30);
+		});
 	}, 100);
 	setTimeout(function () {
 		const aboutVideo = `<video
