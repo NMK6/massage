@@ -3,10 +3,13 @@ import * as utils from './utils';
 export function addMarkup(arr) {
 	const yearContainer = document.querySelector('.footer__year');
 	const backgroundVideo = document.querySelector('.background');
+	const background = document.querySelector('.background__video');
 	const newWidth = elements.rootWidth;
-	const newHeight = newWidth / 1.82 + 'px';
+	const newHeight = newWidth / 1.82;
+	console.log(newWidth);
 
-	backgroundVideo.style.height = newHeight;
+	backgroundVideo.style.height = newHeight + 'px';
+	// background.style.height = newHeight;
 	yearContainer.textContent = arr.year;
 	function openMobMenu(e, navContainerA, ul) {
 		if (e.target.classList.contains('nav__a-navigation')) {
@@ -28,7 +31,7 @@ export function addMarkup(arr) {
 				hideCover();
 				openMobMenu(e, navContainerA, ul);
 			});
-			navContainer.addEventListener('touch', function (e) {
+			navContainer.addEventListener('touchstart', function (e) {
 				hideCover();
 
 				openMobMenu(e, navContainerA, ul);
@@ -58,7 +61,9 @@ export function addMarkup(arr) {
 		const logo = `<a href='/'><img src="/img/logo.svg" alt="logo" loading='lazy' class="nav__logo" width="80" height='27'/></a>`;
 		utils.addExtraHtml(document.querySelector('.nav__logo-container'), logo);
 
-		const videoElement = `<video playsinline autoplay muted loop width=${newWidth} height=${newHeight} poster="/img/cover.jpg" class="background__video"><source src="/video/background.mp4" type="video/mp4" /></video>`;
+		const videoElement = `<video playsinline autoplay muted loop width=${newWidth} height=${Math.round(
+			newHeight
+		)} poster="/img/cover.jpg" class="background__video"><source src="/video/background.mp4" type="video/mp4" /></video>`;
 		utils.addExtraHtml(
 			document.querySelector('.background__video-container'),
 			videoElement
