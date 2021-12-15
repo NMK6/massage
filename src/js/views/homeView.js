@@ -3,19 +3,11 @@ import * as utils from './utils';
 export function addMarkup(arr) {
 	const yearContainer = document.querySelector('.footer__year');
 	const backgroundVideo = document.querySelector('.background');
-	const background = document.querySelector('.background__video');
 	const newWidth = elements.rootWidth;
-	const newHeight = newWidth / 1.82;
-	console.log(newWidth);
-
+	const newHeight = Math.round(newWidth / 1.82);
 	backgroundVideo.style.height = newHeight + 'px';
-	// background.style.height = newHeight;
 	yearContainer.textContent = arr.year;
 	function openMobMenu(e, navContainerA, ul) {
-		if (e.target.classList.contains('nav__a-navigation')) {
-			e.preventDefault();
-		}
-
 		ul.classList.toggle('visually-hidden');
 		navContainerA.classList.toggle('nav__a-navigation--close');
 	}
@@ -23,14 +15,14 @@ export function addMarkup(arr) {
 		if (elements.rootWidth < 700) {
 			const ul = document.querySelector('.nav__ul');
 			ul.classList.add('visually-hidden');
-			const mobButton = `<a class='nav__a-navigation'  href='#navigation'></a>`;
 			const navContainer = document.querySelector('.nav__nav');
-			navContainer.insertAdjacentHTML('afterbegin', mobButton);
+			if (!document.querySelector('.nav__a-navigation')) {
+				const mobButton = `<span class='nav__a-navigation'></span>`;
+				navContainer.insertAdjacentHTML('afterbegin', mobButton);
+			}
+
 			const navContainerA = document.querySelector('.nav__a-navigation');
-			navContainer.addEventListener('click', function (e) {
-				hideCover();
-				openMobMenu(e, navContainerA, ul);
-			});
+
 			navContainer.addEventListener('touchstart', function (e) {
 				hideCover();
 
@@ -61,9 +53,7 @@ export function addMarkup(arr) {
 		const logo = `<a href='/'><img src="/img/logo.svg" alt="logo" loading='lazy' class="nav__logo" width="80" height='27'/></a>`;
 		utils.addExtraHtml(document.querySelector('.nav__logo-container'), logo);
 
-		const videoElement = `<video playsinline autoplay muted loop width=${newWidth} height=${Math.round(
-			newHeight
-		)} poster="/img/cover.jpg" class="background__video"><source src="/video/background.mp4" type="video/mp4" /></video>`;
+		const videoElement = `<video playsinline autoplay muted loop width=${newWidth} height=${newHeight} poster="/img/cover.jpg" class="background__video"><source src="/video/background.mp4" type="video/mp4" /></video>`;
 		utils.addExtraHtml(
 			document.querySelector('.background__video-container'),
 			videoElement
