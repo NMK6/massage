@@ -8,6 +8,9 @@ export function addMarkup(arr) {
 	backgroundVideo.style.height = newHeight + 'px';
 	yearContainer.textContent = arr.year;
 	function openMobMenu(e, navContainerA, ul) {
+		if (e.target.classList.contains('nav__a-navigation')) {
+			e.preventDefault();
+		}
 		ul.classList.toggle('visually-hidden');
 		navContainerA.classList.toggle('nav__a-navigation--close');
 	}
@@ -17,17 +20,20 @@ export function addMarkup(arr) {
 			ul.classList.add('visually-hidden');
 			const navContainer = document.querySelector('.nav__nav');
 			if (!document.querySelector('.nav__a-navigation')) {
-				const mobButton = `<span class='nav__a-navigation'></span>`;
+				const mobButton = `<div class='nav__mobile'><span class='nav__a-navigation'></span></div>`;
 				navContainer.insertAdjacentHTML('afterbegin', mobButton);
 			}
 
 			const navContainerA = document.querySelector('.nav__a-navigation');
 
-			navContainer.addEventListener('touchstart', function (e) {
-				hideCover();
+			// navContainer
+			document
+				.querySelector('.nav__mobile')
+				.addEventListener('touchstart', function (e) {
+					hideCover();
 
-				openMobMenu(e, navContainerA, ul);
-			});
+					openMobMenu(e, navContainerA, ul);
+				});
 		} else {
 			const secondMenuRoot = document.querySelector('.nav__a--massage');
 			const secondMenu = document.querySelector('.nav__about-ul');

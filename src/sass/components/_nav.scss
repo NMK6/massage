@@ -78,7 +78,7 @@
 	.nav {
 		&__logo-container,
 		&__logo-container--footer {
-			top: 3rem;
+			top: 3.5rem;
 			right: 4rem;
 		}
 	}
@@ -91,15 +91,21 @@
 			width: 80px;
 		}
 		&__nav {
-			padding: 1.5rem;
 			z-index: 11;
 			position: absolute;
 			left: 6.5rem;
 		}
+		&__a--massage {
+			padding: 0;
+		}
+		&__mobile {
+			position: absolute;
+			padding: 1.5rem;
+		}
 
 		&__a-navigation {
 			background-color: #cbc7c4;
-			box-shadow: 0 8px 0 #cbc7c4, 0 -8px 0 #cbc7c4;
+			box-shadow: 0 8px 0 #cbc7c4, 0 16px 0 #cbc7c4;
 			height: 2px;
 			position: absolute;
 			top: 0rem;
@@ -132,12 +138,12 @@
 
 		&__ul {
 			flex-direction: column;
-			padding-top: 2rem;
+			padding-top: 4rem;
 			z-index: 4;
 			gap: 10px;
 		}
-		.nav__a--massage {
-			padding: 0 1rem;
+		&__a {
+			padding: 1rem 0;
 		}
 	}
 }
@@ -151,13 +157,10 @@
 }
 @media screen and (max-width: 500px) {
 	.nav__nav {
-		top: 2.5rem;
+		top: 2rem;
 	}
 	.nav__logo-container {
 		top: 1.8rem;
 		right: 1.8rem;
-	}
-	.nav__ul {
-		padding-top: 1rem;
 	}
 }
