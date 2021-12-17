@@ -7,17 +7,13 @@ export function addMarkup(arr) {
 	const newHeight = Math.round(newWidth / 1.82);
 	backgroundVideo.style.height = newHeight + 'px';
 	yearContainer.textContent = arr.year;
-	function openMobMenu(e, navContainerA, ul) {
-		if (e.target.classList.contains('nav__a-navigation')) {
-			e.preventDefault();
-		}
-		ul.classList.toggle('visually-hidden');
-		navContainerA.classList.toggle('nav__a-navigation--close');
-	}
+
 	function mobMenu() {
-		if (elements.rootWidth < 700) {
+		if (elements.rootWidth < 700 || navigator.platform == 'iPhone') {
 			const ul = document.querySelector('.nav__ul');
-			ul.classList.add('visually-hidden');
+			if (!ul.classList.contains('visually - hidden')) {
+				ul.classList.add('visually-hidden');
+			}
 			const navContainer = document.querySelector('.nav__nav');
 			if (!document.querySelector('.nav__a-navigation')) {
 				const mobButton = `<div class='nav__mobile'><span class='nav__a-navigation'></span></div>`;
@@ -25,14 +21,17 @@ export function addMarkup(arr) {
 			}
 
 			const navContainerA = document.querySelector('.nav__a-navigation');
-
-			// navContainer
 			document
 				.querySelector('.nav__mobile')
 				.addEventListener('touchstart', function (e) {
-					hideCover();
-
-					openMobMenu(e, navContainerA, ul);
+					if (e.target.classList.contains('nav__a-navigation')) {
+						e.preventDefault();
+					}
+					const background = document.querySelector('.background__second-menu');
+					background.classList.toggle('background__second-menu--color');
+					document.querySelector('body').classList.toggle('hide-scroll');
+					ul.classList.toggle('visually-hidden');
+					navContainerA.classList.toggle('nav__a-navigation--close');
 				});
 		} else {
 			const secondMenuRoot = document.querySelector('.nav__a--massage');
@@ -68,26 +67,27 @@ export function addMarkup(arr) {
 			document.querySelector('.background__video-container'),
 			'add-opacity'
 		);
-		const fonts = `<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Raleway&display=swap" rel="stylesheet"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />`;
+		const fonts = `<link rel="preconnect" href="https://fonts.googleapis.com" /><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><link href="https://fonts.googleapis.com/css2?family=Eagle+Lake&family=Raleway&display=swap" rel="stylesheet"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />`;
 		utils.addExtraHtml(document.querySelector('head'), fonts);
 
 		const h = document.querySelectorAll('.headings');
+		setTimeout(function () {
+			h.forEach((one, key) => {
+				setTimeout(function () {
+					one.classList.add('new-heading');
+				}, key * 60);
+			});
+			const p = document.querySelectorAll('.text');
+			p.forEach((t, key) => {
+				setTimeout(function () {
+					t.classList.add('new-p');
+				}, key * key * 30);
+			});
+		}, 100);
+	}, 3000);
 
-		h.forEach((one, key) => {
-			setTimeout(function () {
-				one.classList.add('new-heading');
-			}, key * 60);
-		});
-		const p = document.querySelectorAll('.text');
-		p.forEach((t, key) => {
-			setTimeout(function () {
-				t.classList.add('new-p');
-			}, key * key * 30);
-		});
-	}, 100);
 	setTimeout(function () {
-		const aboutVideo = `<video width="560" height="400" controls poster="/img/cover.jpg" class="about__video"><source src="/video/massage.mp4" type="video/mp4" /></video>`;
+		const aboutVideo = `<video width="560" height="400" playsinline controls poster="/img/cover.jpg" class="about__video"><source src="/video/massage.mp4" type="video/mp4" /></video>`;
 		utils.addToBeginningExtraHtml(
 			document.querySelector('.about__video-container'),
 			aboutVideo
@@ -122,7 +122,7 @@ export function addMarkup(arr) {
 			document.querySelector('.price__card-background--three-js'),
 			'price__card-background--three'
 		);
-		const educationVideo = `<video width="560" height="400" controls poster="/img/video.jpg" class="education__video"><source src="/video/education.mp4" type="video/mp4" /></video>`;
+		const educationVideo = `<video width="560" height="400" controls playsinline poster="/img/video.jpg" class="education__video"><source src="/video/education.mp4" type="video/mp4" /></video>`;
 		utils.addToBeginningExtraHtml(
 			document.querySelector('.education__video-container'),
 			educationVideo
@@ -135,7 +135,7 @@ export function addMarkup(arr) {
 	}, 200);
 	function hideCover() {
 		const background = document.querySelector('.background__second-menu');
-		background.classList.toggle('background__second-menu--color');
-		document.querySelector('body').classList.toggle('hide-scroll');
+		background.classList.add('background__second-menu--color');
+		document.querySelector('body').classList.add('hide-scroll');
 	}
 }
