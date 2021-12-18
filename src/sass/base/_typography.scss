@@ -10,6 +10,7 @@ body {
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
 	animation-timing-function: ease;
+	color: #fdf8f4;
 }
 .new-p {
 	font-family: 'Raleway', sans-serif;
@@ -47,7 +48,7 @@ h5 {
 .title {
 	&__h {
 		font-size: 4rem;
-		color: #fdf8f4;
+		// color: #fdf8f4;
 	}
 	&__p {
 		font-size: 1.2rem;
@@ -74,7 +75,8 @@ h5 {
 	text-decoration: none;
 	text-transform: uppercase;
 }
-.massage__one {
+.massage__one,
+.new-heading .massage__one {
 	color: #131213;
 }
 .one__li {
@@ -98,6 +100,14 @@ h5 {
 .price {
 	color: #131213;
 	font-size: 1.2rem;
+}
+.new-heading.price__title,
+.new-heading.price__subheading,
+.new-heading.price__h4-subheading,
+.new-heading.one__title,
+.new-heading.about__title,
+.new-heading.about__subheading {
+	color: #131213;
 }
 .effect .fas {
 	font-size: 1.3rem;

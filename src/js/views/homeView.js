@@ -7,7 +7,34 @@ export function addMarkup(arr) {
 	const newHeight = Math.round(newWidth / 1.82);
 	backgroundVideo.style.height = newHeight + 'px';
 	yearContainer.textContent = arr.year;
+	function toggleMenu(e) {
+		const background = document.querySelector('.background__second-menu');
+		background.classList.toggle('background__second-menu--color');
+		document.querySelector('body').classList.toggle('hide-scroll');
+		document.querySelector('.nav__ul').classList.toggle('visually-hidden');
+		document
+			.querySelector('.nav__a-navigation')
+			.classList.toggle('nav__a-navigation--close');
+	}
+	function openSection(event, e) {
+		event.preventDefault();
+		if (event.target.dataset.link) {
+			toggleMenu(e);
+			const section = event.target.dataset.link;
+			document.querySelector(`#${section}`).scrollIntoView();
+			document
+				.querySelector('.nav__ul')
+				.removeEventListener('touchstart', openSection);
+		}
+	}
+	function openCloseMob(e) {
+		e.preventDefault();
 
+		toggleMenu(e);
+		document
+			.querySelector('.nav__ul')
+			.addEventListener('touchstart', openSection);
+	}
 	function mobMenu() {
 		if (elements.rootWidth < 700 || navigator.platform == 'iPhone') {
 			const ul = document.querySelector('.nav__ul');
@@ -20,19 +47,9 @@ export function addMarkup(arr) {
 				navContainer.insertAdjacentHTML('afterbegin', mobButton);
 			}
 
-			const navContainerA = document.querySelector('.nav__a-navigation');
 			document
 				.querySelector('.nav__mobile')
-				.addEventListener('touchstart', function (e) {
-					if (e.target.classList.contains('nav__a-navigation')) {
-						e.preventDefault();
-					}
-					const background = document.querySelector('.background__second-menu');
-					background.classList.toggle('background__second-menu--color');
-					document.querySelector('body').classList.toggle('hide-scroll');
-					ul.classList.toggle('visually-hidden');
-					navContainerA.classList.toggle('nav__a-navigation--close');
-				});
+				.addEventListener('touchstart', openCloseMob);
 		} else {
 			const secondMenuRoot = document.querySelector('.nav__a--massage');
 			const secondMenu = document.querySelector('.nav__about-ul');
@@ -43,7 +60,7 @@ export function addMarkup(arr) {
 				lis.forEach((l, key) => {
 					setTimeout(function () {
 						l.classList.toggle('nav__opacity');
-					}, (key + 1) * 70);
+					}, (key + 1) * 30);
 				});
 
 				setTimeout(function () {
@@ -75,19 +92,20 @@ export function addMarkup(arr) {
 			h.forEach((one, key) => {
 				setTimeout(function () {
 					one.classList.add('new-heading');
-				}, key * 60);
+				}, key * 70);
 			});
-			const p = document.querySelectorAll('.text');
-			p.forEach((t, key) => {
-				setTimeout(function () {
-					t.classList.add('new-p');
-				}, key * key * 30);
-			});
-		}, 100);
-	}, 3000);
+		}, 1900);
+
+		const p = document.querySelectorAll('.text');
+		p.forEach((t, key) => {
+			setTimeout(function () {
+				t.classList.add('new-p');
+			}, key * key * 50);
+		});
+	}, 100);
 
 	setTimeout(function () {
-		const aboutVideo = `<video width="560" height="400" playsinline controls poster="/img/cover.jpg" class="about__video"><source src="/video/massage.mp4" type="video/mp4" /></video>`;
+		const aboutVideo = `<video controls autoplay loop muted playsinline width="560" height="400" poster="/img/cover.jpg" class="about__video"><source src="/video/massage.mp4" type="video/mp4" /></video>`;
 		utils.addToBeginningExtraHtml(
 			document.querySelector('.about__video-container'),
 			aboutVideo
@@ -122,7 +140,7 @@ export function addMarkup(arr) {
 			document.querySelector('.price__card-background--three-js'),
 			'price__card-background--three'
 		);
-		const educationVideo = `<video width="560" height="400" controls playsinline poster="/img/video.jpg" class="education__video"><source src="/video/education.mp4" type="video/mp4" /></video>`;
+		const educationVideo = `<video controls autoplay loop muted playsinline width="560" height="400" poster="/img/video.jpg" class="education__video"><source src="/video/education.mp4" type="video/mp4" /></video>`;
 		utils.addToBeginningExtraHtml(
 			document.querySelector('.education__video-container'),
 			educationVideo
@@ -132,6 +150,19 @@ export function addMarkup(arr) {
 			document.querySelector('.nav__logo-container--footer'),
 			footerLogo
 		);
+		const icons = [
+			'<i class="fas fa-child"></i>',
+			'<i class="fas fa-feather"></i>',
+			'<i class="fas fa-spa"></i>',
+			'<i class="fab fa-whatsapp"></i>',
+			'<i class="fab fa-instagram-square"></i>',
+			'<i class="fab fa-facebook-square"></i>',
+			'<i class="fab fa-telegram-plane"></i>',
+		];
+		const iconsContainers = document.querySelectorAll('.icons__container');
+		iconsContainers.forEach((one, key) => {
+			one.insertAdjacentHTML('beforeend', icons[key]);
+		});
 	}, 200);
 	function hideCover() {
 		const background = document.querySelector('.background__second-menu');
