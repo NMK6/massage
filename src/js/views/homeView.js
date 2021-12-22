@@ -35,8 +35,9 @@ export function addMarkup(arr) {
 			.querySelector('.nav__ul')
 			.addEventListener('touchstart', openSection);
 	}
+	const device = navigator.platform;
 	function mobMenu() {
-		if (elements.rootWidth < 700 || navigator.platform == 'iPhone') {
+		if (elements.rootWidth < 700 || device == 'iPhone') {
 			const ul = document.querySelector('.nav__ul');
 			if (!ul.classList.contains('visually - hidden')) {
 				ul.classList.add('visually-hidden');
@@ -74,8 +75,11 @@ export function addMarkup(arr) {
 	setTimeout(function () {
 		const logo = `<a href='/'><img src="/img/logo.svg" alt="logo" loading='lazy' class="nav__logo" width="80" height='27'/></a>`;
 		utils.addExtraHtml(document.querySelector('.nav__logo-container'), logo);
-
-		const videoElement = `<video playsinline autoplay muted loop width=${newWidth} height=${newHeight} poster="/img/cover.jpg" class="background__video"><source src="/video/background.mp4" type="video/mp4" /></video>`;
+		let videoElement;
+		device == 'iPhone'
+			? (videoElement = `<video playsinline autoplay muted loop width=${newWidth} height=${newHeight} class="background__video"><source src="/video/background.mp4" type="video/mp4" /></video>`)
+			: (videoElement = `<video playsinline autoplay muted loop width=${newWidth} height=${newHeight} poster="/img/cover.jpg" class="background__video"><source src="/video/background.mp4" type="video/mp4" /></video>`);
+		// const videoElement = `<video playsinline autoplay muted loop width=${newWidth} height=${newHeight} poster="/img/cover.jpg" class="background__video"><source src="/video/background.mp4" type="video/mp4" /></video>`;
 		utils.addExtraHtml(
 			document.querySelector('.background__video-container'),
 			videoElement
@@ -100,12 +104,16 @@ export function addMarkup(arr) {
 		p.forEach((t, key) => {
 			setTimeout(function () {
 				t.classList.add('new-p');
-			}, key * key * 50);
+			}, key * key * 20);
 		});
 	}, 100);
 
 	setTimeout(function () {
-		const aboutVideo = `<video controls autoplay loop muted playsinline width="560" height="400" poster="/img/cover.jpg" class="about__video"><source src="/video/massage.mp4" type="video/mp4" /></video>`;
+		let aboutVideo;
+		device == 'iPhone'
+			? (aboutVideo = `<video controls autoplay loop muted playsinline width="560" height="400" class="about__video"><source src="/video/massage.mp4" type="video/mp4" /></video>`)
+			: (aboutVideo = `<video controls autoplay loop muted playsinline width="560" height="400" poster="/img/cover.jpg" class="about__video"><source src="/video/massage.mp4" type="video/mp4" /></video>`);
+		// const aboutVideo = `<video controls autoplay loop muted playsinline width="560" height="400" poster="/img/cover.jpg" class="about__video"><source src="/video/massage.mp4" type="video/mp4" /></video>`;
 		utils.addToBeginningExtraHtml(
 			document.querySelector('.about__video-container'),
 			aboutVideo
@@ -140,7 +148,11 @@ export function addMarkup(arr) {
 			document.querySelector('.price__card-background--three-js'),
 			'price__card-background--three'
 		);
-		const educationVideo = `<video controls autoplay loop muted playsinline width="560" height="400" poster="/img/video.jpg" class="education__video"><source src="/video/education.mp4" type="video/mp4" /></video>`;
+		let educationVideo;
+		device == 'iPhone'
+			? (educationVideo = `<video controls autoplay loop muted playsinline width="560" height="400"  class="education__video"><source src="/video/education.mp4" type="video/mp4" /></video>`)
+			: (educationVideo = `<video controls autoplay loop muted playsinline width="560" height="400" poster="/img/video.jpg" class="education__video"><source src="/video/education.mp4" type="video/mp4" /></video>`);
+		// const educationVideo = `<video controls autoplay loop muted playsinline width="560" height="400" poster="/img/video.jpg" class="education__video"><source src="/video/education.mp4" type="video/mp4" /></video>`;
 		utils.addToBeginningExtraHtml(
 			document.querySelector('.education__video-container'),
 			educationVideo

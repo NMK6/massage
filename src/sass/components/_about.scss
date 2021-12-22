@@ -34,7 +34,6 @@
 			width: 100%;
 		}
 		&__button {
-			display: block;
 			margin-bottom: 1rem;
 		}
 	}
@@ -59,7 +58,6 @@
 	.about__container {
 		flex-direction: column;
 		height: auto;
-	
 	}
 }
 @media screen and (max-width: 500px) {

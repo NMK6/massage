@@ -52,6 +52,9 @@
 	&__button {
 		margin-top: 2.3rem;
 		width: 11rem;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		height: 3.4rem;
 		font-size: 1.2rem;
 		border: none;
