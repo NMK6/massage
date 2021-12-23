@@ -61,7 +61,7 @@ export function addMarkup(arr) {
 				lis.forEach((l, key) => {
 					setTimeout(function () {
 						l.classList.toggle('nav__opacity');
-					}, (key + 1) * 30);
+					}, (key + 1) * 35);
 				});
 
 				setTimeout(function () {
@@ -141,14 +141,6 @@ export function addMarkup(arr) {
 			document.querySelector('.price__card-background--three-js'),
 			'price__card-background--three'
 		);
-		const v = document.querySelector('.about__video');
-		v.addEventListener('touchstart', function () {
-			if (v.paused) {
-				v.play();
-			} else {
-				v.pause();
-			}
-		});
 
 		const educationVideo = `<video controls playsinline width="560" height="400" poster="/img/video.jpg" class="education__video"><source src="/video/education.mp4" type="video/mp4" /></video>`;
 		utils.addToBeginningExtraHtml(
